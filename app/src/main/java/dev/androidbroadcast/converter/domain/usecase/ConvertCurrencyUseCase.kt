@@ -10,7 +10,7 @@ class ConvertCurrencyUseCase(
         return repository.getCurrencies()
     }
 
-//    suspend fun execute(amount: Double, from: String, to: String): Double {
-//        return repository.convert(amount, from ,to)
-//    }
+    suspend fun execute(amount: Double, from: String, to: String): Double {
+        return repository.convert(amount, from ,to)
+    }
 }

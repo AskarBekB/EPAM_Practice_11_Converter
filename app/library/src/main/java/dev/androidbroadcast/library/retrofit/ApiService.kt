@@ -1,4 +1,4 @@
-package dev.androidbroadcast.converter.data.retrofit
+package dev.androidbroadcast.library.retrofit
 
 import retrofit2.http.GET
 import retrofit2.http.Query

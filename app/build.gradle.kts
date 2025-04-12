@@ -40,6 +40,9 @@ android {
 
 dependencies {
 
+    //Connection library modules
+    implementation(project(":app:library"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

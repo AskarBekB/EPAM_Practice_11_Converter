@@ -21,10 +21,10 @@ class CurrencyViewModel(private val useCase: ConvertCurrencyUseCase): ViewModel(
         }
     }
 
-//    fun convertAmount(amount: Double, from: String, to: String, onResult: (Double) -> Unit) {
-//        viewModelScope.launch {
-//            val result = useCase.execute(amount, from, to)
-//            onResult(result)
-//        }
-//    }
+    fun convertAmount(amount: Double, from: String, to: String, onResult: (Double) -> Unit) {
+        viewModelScope.launch {
+            val result = useCase.execute(amount, from, to)
+            onResult(result)
+        }
+    }
 }

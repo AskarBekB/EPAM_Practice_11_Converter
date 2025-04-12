@@ -1,10 +1,12 @@
 package dev.androidbroadcast.converter
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import dev.androidbroadcast.converter.databinding.ActivityMainBinding
+import dev.androidbroadcast.converter.presentation.activity.CurrencyConverterActivity
 import dev.androidbroadcast.converter.presentation.adapter.CurrencyAdapter
 import dev.androidbroadcast.converter.presentation.di.DependencyProvider
 import dev.androidbroadcast.converter.presentation.viewmodel.CurrencyViewModel
@@ -31,6 +33,11 @@ class MainActivity : AppCompatActivity() {
         })
 
         viewModel.loadCurrencies()
+
+        binding.converterBtn.setOnClickListener {
+            val intent = Intent(this, CurrencyConverterActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
 

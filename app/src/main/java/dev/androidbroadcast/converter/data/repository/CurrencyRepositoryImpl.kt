@@ -2,7 +2,7 @@ package dev.androidbroadcast.converter.data.repository
 
 import dev.androidbroadcast.converter.data.mapper.CurrencyDataMapper
 import dev.androidbroadcast.converter.data.model.CurrencyEntity
-import dev.androidbroadcast.converter.data.retrofit.RetrofitClient
+import dev.androidbroadcast.library.retrofit.RetrofitClient
 import dev.androidbroadcast.converter.domain.model.Currency
 import dev.androidbroadcast.converter.domain.repository.CurrencyRepository
 import kotlin.random.Random

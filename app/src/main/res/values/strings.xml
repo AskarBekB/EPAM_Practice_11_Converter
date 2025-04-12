@@ -3,4 +3,10 @@
     <string name="currency_name">Currency Name</string>
     <string name="rate">Rate</string>
     <string name="change">Change</string>
+    <string name="result">Result:</string>
+    <string name="convert">Convert</string>
+    <string name="to_currency_e_g_eur">To currency (e.g., EUR)</string>
+    <string name="from_currency_e_g_usd">From currency (e.g., USD)</string>
+    <string name="amount">Amount</string>
+    <string name="please_fill_all_fields_correctly">Please fill all fields correctly</string>
 </resources>
