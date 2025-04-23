@@ -9,4 +9,8 @@
     <string name="from_currency_e_g_usd">From currency (e.g., USD)</string>
     <string name="amount">Amount</string>
     <string name="please_fill_all_fields_correctly">Please fill all fields correctly</string>
+    <string name="login_failed">Login failed</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
 </resources>
