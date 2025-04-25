@@ -18,18 +18,36 @@ class LoginFlowTest {
     val rule = ActivityScenarioRule(LoginActivity::class.java)
 
     @Test
+    fun failedLogin_showsErrorMessage() {
+        onView(withId(R.id.editUsername)).perform(typeText("wrong"), closeSoftKeyboard())
+        onView(withId(R.id.editPassword)).perform(typeText("1234"), closeSoftKeyboard())
+        onView(withId(R.id.loginButton)).perform(click())
+        onView(withId(R.id.errorText)).check(matches(withText("Login failed")))
+    }
+
+    @Test
+    fun emptyUsername_displaysError() {
+        onView(withId(R.id.editUsername)).perform(typeText(""), closeSoftKeyboard())
+        onView(withId(R.id.editPassword)).perform(typeText("pass"), closeSoftKeyboard())
+        onView(withId(R.id.loginButton)).perform(click())
+
+        onView(withId(R.id.errorText)).check(matches(withText("Login failed")))
+    }
+
+    @Test
+    fun emptyPassword_displaysError() {
+        onView(withId(R.id.editUsername)).perform(typeText("user"), closeSoftKeyboard())
+        onView(withId(R.id.editPassword)).perform(typeText(""), closeSoftKeyboard())
+        onView(withId(R.id.loginButton)).perform(click())
+
+        onView(withId(R.id.errorText)).check(matches(withText("Login failed")))
+    }
+
+    @Test
     fun successfulLogin_opensMainActivity() {
         onView(withId(R.id.editUsername)).perform(typeText("user"), closeSoftKeyboard())
         onView(withId(R.id.editPassword)).perform(typeText("pass"), closeSoftKeyboard())
         onView(withId(R.id.loginButton)).perform(click())
     }
-
-    @Test
-    fun failedLogin_showsErrorMessage() {
-        onView(withId(R.id.editUsername)).perform(typeText("wrong"), closeSoftKeyboard())
-        onView(withId(R.id.editPassword)).perform(typeText("1234"), closeSoftKeyboard())
-        onView(withId(R.id.loginButton)).perform(click())
-
-        onView(withId(R.id.errorText)).check(matches(withText("Login failed")))
-    }
 }
+
